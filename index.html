@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory Intelligence Report</title>
-    <script type="module" crossorigin src="./assets/index-FJaVVxIW.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/vendor-CUMsuIJt.js">
-    <link rel="modulepreload" crossorigin href="./assets/vendor-react-BNztXPPB.js">
-    <link rel="modulepreload" crossorigin href="./assets/vendor-charts-BI_6xi8P.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-CJIvEFD4.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><p style="font-family:monospace;padding:2rem">Loading report&hellip;</p></div>
+<script>(async()=>{async function gz(s){const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return new Response(new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"))).text()}async function parts(base,n){let t="";for(let i=0;i<n;i++){const r=await fetch(base+"."+String(i).padStart(2,"0"));if(!r.ok)throw new Error("missing "+base+" part "+i);t+=await r.text()}return t}const secs={};let name=null,buf=[];const flush=async()=>{if(name)secs[name]=await gz(buf.join(""));buf=[]};const text=await parts("./assets-bundle.b64",8);for(const line of text.split("\n")){if(line.startsWith("== ")){await flush();name=line.slice(3).trim()}else if(line.trim())buf.push(line.trim())}await flush();for(const[n,t]of Object.entries(secs))if(n.endsWith(".css")){const s=document.createElement("style");s.textContent=t;document.head.appendChild(s)}for(const[n,t]of Object.entries(secs))if(n.endsWith(".js")){const u=URL.createObjectURL(new Blob([t],{type:"text/javascript"})),s=document.createElement("script");s.type="module";s.src=u;document.body.appendChild(s)}})().catch(e=>{document.getElementById("root").innerHTML="<p style=\"font-family:monospace;padding:2rem\">Failed to load: "+e.message+"</p>"});</script>
   </body>
 </html>
